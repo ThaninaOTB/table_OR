@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- ✅ META VIEWPORT AJOUTÉ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Table d'Or - Restaurant Gastronomique</title>
+    </head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">✨ LA TABLE D'OR</div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#accueil" onclick="closeMenu()">Accueil</a></li>
+                    <li><a href="#histoire" onclick="closeMenu()">Notre Histoire</a></li>
+                    <li><a href="#menu" onclick="closeMenu()">Menu</a></li>
+                    <li><a href="#avis" onclick="closeMenu()">Avis</a></li>
+                    <li><a href="#reservation" class="btn-reservation" onclick="closeMenu()">Réserver</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <p class="hero-subtitle">RESTAURANT GASTRONOMIQUE</p>
+            <h1>LA TABLE D'OR</h1>
+            <p class="hero-description">
+                Une expérience culinaire inoubliable où tradition et innovation 
+                se rencontrent pour éveiller vos sens
+            </p>
+            <div class="cta-buttons">
+                <a href="#menu" class="btn-primary">Découvrir le Menu</a>
+                <a href="#reservation" class="btn-secondary">Réserver une Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="histoire">
+        <div class="about-image">
+            👨‍🍳<br>CHEF ÉTOILÉ
+        </div>
+        <div class="about-content">
+            <p class="section-label">NOTRE HISTOIRE</p>
+            <h2 class="section-title">Une Passion pour l'Excellence Culinaire</h2>
+            <p class="about-text">
+                Depuis 2010, La Table d'Or incarne l'excellence de la gastronomie française. 
+                Notre chef étoilé, formé dans les plus grandes maisons, compose des plats 
+                sublimes alliant techniques traditionnelles et créativité contemporaine.
+            </p>
+            <p class="about-text">
+                Chaque assiette raconte une histoire, celle de producteurs locaux passionnés, 
+                de saisons généreuses et d'un savoir-faire transmis avec amour. Nous sélectionnons 
+                rigoureusement nos ingrédients pour vous offrir une expérience gustative unique.
+            </p>
+            <p class="chef-signature">— Chef Alexandre Dubois</p>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+        <div class="menu-header">
+            <p class="section-label">NOS CRÉATIONS</p>
+            <h2 class="section-title">Plats Signatures</h2>
+        </div>
+        <div class="dishes-grid">
+            <div class="dish-card">
+                <div class="dish-image">
+                    🦞
+                    <div class="dish-badge">SIGNATURE</div>
+                </div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Homard Breton Flambé</h3>
+                    <p class="dish-description">
+                        Homard breton entier flambé au cognac, servi avec sa bisque 
+                        veloutée et légumes glacés
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">58€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image">🥩</div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Bœuf Wagyu Rossini</h3>
+                    <p class="dish-description">
+                        Filet de bœuf Wagyu poêlé, foie gras poêlé, sauce truffe 
+                        et purée de pommes de terre truffée
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">75€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image">
+                    🐟
+                    <div class="dish-badge">NOUVEAU</div>
+                </div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Saint-Jacques Rôties</h3>
+                    <p class="dish-description">
+                        Noix de Saint-Jacques bretonnes, risotto crémeux aux agrumes, 
+                        écume de champagne
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">48€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image">🍄</div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Risotto aux Cèpes</h3>
+                    <p class="dish-description">
+                        Risotto crémeux aux cèpes frais, copeaux de parmesan 36 mois 
+                        et huile de truffe blanche
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">42€</span>
+                        <span class="dish-rating">★★★★☆</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image">🦆</div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Magret de Canard</h3>
+                    <p class="dish-description">
+                        Magret de canard des Landes rôti, jus aux fruits rouges, 
+                        légumes de saison et pommes sarladaises
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">38€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image">
+                    🍰
+                    <div class="dish-badge">SIGNATURE</div>
+                </div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Soufflé au Grand Marnier</h3>
+                    <p class="dish-description">
+                        Soufflé chaud au Grand Marnier, crème anglaise vanille 
+                        Madagascar, glace vanille maison
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">18€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="avis">
+        <div class="testimonials-header">
+            <p class="section-label">TÉMOIGNAGES</p>
+            <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Une expérience culinaire absolument exceptionnelle ! Chaque plat 
+                    est une œuvre d'art. Le service est impeccable et l'ambiance raffinée. 
+                    Un must absolu à Paris !"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MC</div>
+                    <div class="author-info">
+                        <h4>Marie Chevallier</h4>
+                        <p>Cliente VIP</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Le homard breton était divin ! La présentation des plats est 
+                    spectaculaire et les saveurs sont sublimes. Un grand merci au chef 
+                    pour ce moment magique."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PD</div>
+                    <div class="author-info">
+                        <h4>Pierre Durand</h4>
+                        <p>Critique Gastronomique</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Restaurant d'exception où chaque détail compte. La carte des vins 
+                    est remarquable et s'accorde parfaitement avec les mets. Une adresse 
+                    à ne pas manquer !"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SL</div>
+                    <div class="author-info">
+                        <h4>Sophie Lambert</h4>
+                        <p>Sommelière</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="reservation" id="reservation">
+        <div class="reservation-container">
+            <p class="section-label">RÉSERVATION</p>
+            <h2 class="section-title">Réservez Votre Table</h2>
+            <p class="about-text">
+                Réservez dès maintenant pour vivre une expérience gastronomique inoubliable
+            </p>
+            
+            <form class="reservation-form" onsubmit="return handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nom Complet</label>
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="votre@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="+33 6 12 34 56 78" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre de Personnes</label>
+                        <select required>
+                            <option value="">Sélectionner</option>
+                            <option>1 personne</option>
+                            <option>2 personnes</option>
+                            <option>3 personnes</option>
+                            <option>4 personnes</option>
+                            <option>5+ personnes</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Heure</label>
+                        <select required>
+                            <option value="">Sélectionner</option>
+                            <option>12:00</option>
+                            <option>12:30</option>
+                            <option>13:00</option>
+                            <option>19:00</option>
+                            <option>19:30</option>
+                            <option>20:00</option>
+                            <option>20:30</option>
+                            <option>21:00</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Message (optionnel)</label>
+                    <textarea rows="4" placeholder="Allergies, occasions spéciales..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Confirmer la Réservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>La Table d'Or</h3>
+                <p>Restaurant gastronomique étoilé au cœur de Paris, offrant une cuisine d'exception depuis 2010.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <a href="#accueil">Accueil</a>
+                <a href="#histoire">Notre Histoire</a>
+                <a href="#menu">Menu</a>
+                <a href="#avis">Avis Clients</a>
+                <a href="#reservation">Réserver</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Déjeuner<br>Mardi - Dimanche<br>12h00 - 14h30</p>
+                <p>Dîner<br>Mardi - Samedi<br>19h00 - 22h30</p>
+                <p style="color: #d4af37;">Fermé le lundi</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📍 25 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                <p>📞 +33 1 42 56 78 90</p>
+                <p>✉️ contact@latabledor.fr</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 La Table d'Or - Tous droits réservés | Création: Votre Nom</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menu mobile
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const overlay = document.getElementById('menuOverlay');
+            const toggle = document.querySelector('.menu-toggle');
+            
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Animation du bouton hamburger
+            if (nav.classList.contains('active')) {
+                toggle.innerHTML = '✕';
+            } else {
+                toggle.innerHTML = '☰';
+            }
+        }
+
+        // Fermer le menu
+        function closeMenu() {
+            const nav = document.getElementById('mainNav');
+            const overlay = document.getElementById('menuOverlay');
+            const toggle = document.querySelector('.menu-toggle');
+            
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+            toggle.innerHTML = '☰';
+        }
+
+        // Handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Merci pour votre réservation ! Nous vous confirmerons par email sous 24h.');
+            event.target.reset();
+            return false;
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.98)';
+                header.style.padding = '15px 0';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.padding = '25px 0';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
