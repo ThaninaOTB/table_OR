@@ -1,0 +1,444 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(114 158 169);
+    /*background-color: rgb(232, 224, 224);*/
+}
+/*=====================================*/
+/*========== Page1 du site  index.html===========*/
+/*=====================================*/
+
+
+
+/*======header=====*/
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+    padding: 10px 0;
+    background: transparent;
+    transition: 0.3s ease;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    position: relative;
+    height: 110px;
+    width: 100px;
+}
+.logo  img {
+        height: 100px;
+        width: auto;
+        transition: 0.3s ease;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+.logo-color {
+  display: none;
+}
+
+.logo-white {
+  display: block;
+}
+
+nav ul li a {
+  color: white;
+text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+nav ul  {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        
+    }
+
+header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header.scrolled .logo-white {
+  display: none;
+}
+
+header.scrolled .logo-color {
+  display: block;
+}
+
+header.scrolled nav ul li a {
+  color: black;
+}
+
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 650px;
+    padding: 20px;
+}
+
+button{
+    background-color: #194e6b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+       
+}
+.hero-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 20px ;
+}
+button:hover{
+    cursor: pointer;
+}
+
+/*======a propos=====*/
+
+h2{
+    font-size: xx-large;
+    color: #194e6b;
+    text-align: center;
+}
+
+.about{
+    padding:100px 0;
+    /*background-color: #194e6b;*/
+    color: white;
+}
+.ab{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+.abbout {
+        margin-top: 20px ;
+        display: inline-block;
+        padding: 14px 32px;
+        background: #fff;
+        color:#194e6b;
+        font-weight: 600;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 0.25s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.abbout a{
+     color:#194e6b;
+     text-decoration: none;
+}
+.abh{
+    color: #194e6b;
+    font-weight: 700;
+
+}
+
+
+/*============Mes produits ===============*/
+
+.produits{
+    padding-top: 50px;
+}
+.cards{
+   
+   margin-top: 40px ;
+    display: flex;
+    justify-content: center;
+    gap: 25px ;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    /*background-color:#f0ecec;*/
+    background-color:#ffffff;
+    width: 250px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform .3s;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+img{
+    height: 150px;
+    width: 200px ;
+    border-radius: 15px;
+}
+
+
+/*======Conseil======*/
+.conseilll{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    margin-top: 40px ;
+    flex-wrap: wrap;
+    
+}
+.conseill{
+    
+    gap:15px;
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.conseil{
+    width:700px;
+ 
+}
+.conseil img{
+    gap:20px ;
+    
+}
+
+.conseilll p{
+    text-align: left;
+}
+
+.conseils{
+    padding-top: 50px;
+}
+
+.conseils button{
+    margin-top: 20px;
+   margin-left: 490px ;
+   width:20%;
+    
+  
+}
+
+/*===============contact info================*/
+.continf{
+    padding-top: 50px;
+}
+.contactinfo{
+        display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.infos{
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+iframe{
+   
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 40px;
+    height: 40%;
+
+}
+.cont{
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.continfo{
+   
+    padding: 60px 20px;
+    background: #f5f5f5;
+
+}
+
+.cont input, .contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+.infos p {
+    text-align: left;
+}
+input{
+    margin-bottom: 20px ;
+    width:90%;
+    margin-top: 5px ;
+}
+textarea{
+    margin-top: 5px;
+       width:95%;
+       height: 80px;
+
+}
+
+.boutnform{
+    margin-top: 20px;
+    width:97%;
+}
+/*===================foooter==========================*/
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    background: #194e6b;
+    color: white;
+}
+
+
+
+/*=================================================*/
+/*===============page2  About ===============================*/
+/*================================================*/
+
+.nous{
+    margin-top: 135px;
+       text-align: center;
+    background-color: #ffffff;
+}
+.nous h2{
+  padding: 30px ;
+ }
+
+.quinoussomme{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap:80px;
+ margin-top: 40px ;
+ padding-bottom: 40PX ;
+
+}
+.quinous{
+    width: 50%;
+}
+
+.quinous label {
+    background-color: rgb(114 158 169);
+    color :white;
+    padding: 10px ;
+    border-radius: 10px ;
+    MARGIN-RIGHT: 20PX;
+    
+}
+.labels{
+    margin-top: 30px;
+    margin-bottom: 30px ;
+}
+
+.quinous button{
+    margin-bottom: 30px ;
+}
+.qui img {
+   border-radius: 20px ;
+   width: 100%;
+}
+
+
+.histoire{
+    margin-top: 60px ;
+    background-color: #ffffff;
+}
+
+.histoire nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap:40px; 
+    
+}
+
+.histoire li {
+    background-color: rgb(114 158 169);
+    padding: 10px ;
+    border-radius: 10px ;
+    transition: transform .3s;
+    
+
+}
+.histoire li:hover{
+    transform: scale(0.7);
+}
+.histoire a{
+    
+text-align: center;
+
+}
+.histoire h2 {
+    padding: 30px ;
+}
+
+.notrehis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 90PX ;
+}
+
+.contenu{
+    width: 50%;
+}
+
+.notrehis img {
+    border-radius: 20px;
+    width: 30%;
+}
+
+
+
+h3{
+    text-align: center;
+}
