@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <!-- ✅ META VIEWPORT AJOUTÉ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>La Table d'Or - Restaurant Gastronomique</title>
     </head>
 <body>
-    <!-- HEADER -->
-    <header>
+
+    <header id="header" class="scrolled">
         <div class="nav-container">
             <div class="logo">✨ LA TABLE D'OR</div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
@@ -46,7 +48,8 @@
     <!-- ABOUT -->
     <section class="about" id="histoire">
         <div class="about-image">
-            👨‍🍳<br>CHEF ÉTOILÉ
+            <img src="images/histoire.jfif"
+           
         </div>
         <div class="about-content">
             <p class="section-label">NOTRE HISTOIRE</p>
@@ -74,7 +77,7 @@
         <div class="dishes-grid">
             <div class="dish-card">
                 <div class="dish-image">
-                    🦞
+                    <img src="images/homard.jfif">
                     <div class="dish-badge">SIGNATURE</div>
                 </div>
                 <div class="dish-info">
@@ -92,7 +95,7 @@
 
             <div class="dish-card">
                 <div class="dish-image">
-                    🐟
+                    <img src="images/filetDeBoeuf.jfif">
                     <div class="dish-badge">NOUVEAU</div>
                 </div>
                 <div class="dish-info">
@@ -107,6 +110,57 @@
                     </div>
                 </div>
             </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/rizotto.webp">
+                    <div class="dish-badge">SIGNATURE</div>
+                </div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Risotto aux Cèpes</h3>
+                    <p class="dish-description">
+                        Risotto crémeux aux cèpes frais, copeaux de parmesan 36 mois 
+                        et huile de truffe blanche
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">42€</span>
+                        <span class="dish-rating">★★★★☆</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image"><img src="images/agneau.jfif">
+                <div class="dish-badge">NOUVEAU</div>
+                </div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Magret de Canard</h3>
+                    <p class="dish-description">
+                        Magret de canard des Landes rôti, jus aux fruits rouges, 
+                        légumes de saison et pommes sarladaises
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">38€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/soufflé.jfif">
+                    <div class="dish-badge">SIGNATURE</div>
+                </div>
+                <div class="dish-info">
+                    <h3 class="dish-name">Soufflé au Grand Marnier</h3>
+                    <p class="dish-description">
+                        Soufflé chaud au Grand Marnier, crème anglaise vanille 
+                        Madagascar, glace vanille maison
+                    </p>
+                    <div class="dish-footer">
+                        <span class="dish-price">18€</span>
+                        <span class="dish-rating">★★★★★</span>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -241,9 +295,9 @@
                 <h3>La Table d'Or</h3>
                 <p>Restaurant gastronomique étoilé au cœur de Paris, offrant une cuisine d'exception depuis 2010.</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon" aria-label="Facebook">📘</a>
-                    <a href="#" class="social-icon" aria-label="Instagram">📷</a>
-                    <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                    <a href="https://www.facebook.com" class="social-icon" aria-label="Facebook">📘</a>
+                    <a href="https://www.instagram.com" class="social-icon" aria-label="Instagram">📷</a>
+                    <a href="https://www.twitter.com" class="social-icon" aria-label="Twitter">🐦</a>
                 </div>
             </div>
             
@@ -272,7 +326,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>© 2025 La Table d'Or - Tous droits réservés | Création: Votre Nom</p>
+            <p>© 2025 La Table d'Or - Tous droits réservés | Création: THANINA</p>
         </div>
     </footer>
 
@@ -344,5 +398,6 @@
             lastScroll = currentScroll;
         });
     </script>
+    <script src="index.js"></script>
 </body>
 </html>
