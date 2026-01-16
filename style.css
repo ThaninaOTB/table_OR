@@ -31,6 +31,89 @@ body {
 }
 
 /* ===== HEADER & NAVIGATION ===== */
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(26, 26, 26, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--gold);
+  font-family: "Georgia", serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.4rem;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: var(--gold);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+
+
+
 header {
     position: fixed;
     top: 0;
@@ -618,67 +701,7 @@ footer {
     }
 }
 
-/* Mobile*/
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    
-    #mainNav {
-        position: fixed;
-        top: 0;
-        right: -300px;
-        width: 300px;
-        height: 100vh;
-        background: var(--black);
-        padding: 100px 40px;
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
-    
-    #mainNav.active {
-        right: 0;
-    }
-    
-    #mainNav ul {
-        flex-direction: column;
-        gap: 25px;
-    }
-    
-    #mainNav a {
-        font-size: 1.2rem;
-        padding: 12px 0;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-    
-    .hero-description {
-        font-size: 1.1rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .dishes-grid,
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .form-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .reservation-container {
-        padding: 40px 20px;
-    }
-}
+
 
 
 
@@ -695,3 +718,91 @@ img {
    
 }
 
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .plats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: rgba(26, 26, 26, 0.98);
+    width: 100%;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    gap: 1.5rem;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .histoire-content {
+    flex-direction: column;
+  }
+
+  .plats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-form {
+    padding: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .cta-btn {
+    padding: 0.8rem 2rem;
+  }
+
+  .reservation-form {
+    padding: 1.5rem;
+  }
+}

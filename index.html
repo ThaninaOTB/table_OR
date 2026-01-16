@@ -10,21 +10,28 @@
     </head>
 <body>
 
-    <header id="header" class="scrolled">
+  <nav class="nav">
         <div class="nav-container">
-            <div class="logo">✨ LA TABLE D'OR</div>
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#accueil" onclick="closeMenu()">Accueil</a></li>
-                    <li><a href="#histoire" onclick="closeMenu()">Notre Histoire</a></li>
-                    <li><a href="#menu" onclick="closeMenu()">Menu</a></li>
-                    <li><a href="#avis" onclick="closeMenu()">Avis</a></li>
-                    <li><a href="#reservation" class="btn-reservation" onclick="closeMenu()">Réserver</a></li>
-                </ul>
-            </nav>
+            <div class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#d4af37"/>
+                </svg>
+                La Table d'Or
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#histoire">Notre Histoire</a></li>
+                <li><a href="#plats">Nos Plats</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#reservation">Réserver</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Overlay -->
     <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
@@ -48,7 +55,7 @@
     <!-- ABOUT -->
     <section class="about" id="histoire">
         <div class="about-image">
-            <img src="images/histoire.jfif"
+            <img src="images/histoire.jfif">
            
         </div>
         <div class="about-content">
